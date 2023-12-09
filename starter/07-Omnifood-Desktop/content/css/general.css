@@ -46,14 +46,17 @@ body {
   letter-spacing: 0.75;
 }
 .btn:link,
-.btn:visited {
+.btn:visited,
+.btn {
   font-size: 2rem;
   display: inline-block;
   padding: 1.6rem 3.2rem;
   border-radius: 0.9rem;
   text-decoration: none;
-
+  border: none;
+  cursor: pointer;
   transition: all 0.3s;
+  font-family: inherit;
 }
 .btn--full:link,
 .btn--full:visited {
@@ -73,6 +76,20 @@ body {
 .btn--outline:active {
   background-color: #fdf2e9;
   box-shadow: inset 0 0 3px #fff;
+}
+.btn--form {
+  background-color: #45260a;
+  color: #fdf2e9;
+  align-self: end;
+  padding: 1.2rem;
+}
+.btn--form:hover {
+  background-color: #fff;
+  color: #555;
+}
+*:focus {
+  outline: none;
+  box-shadow: 0 0 0.8rem rgba(230, 125, 34, 0.5);
 }
 .link:link,
 .link:visited {
@@ -106,6 +123,11 @@ body {
   display: grid;
   column-gap: 6.4rem;
   row-gap: 9.6rem;
+  margin-bottom: 9.6rem;
+}
+
+.grid:not(:last-child) {
+  margin-bottom: 9.6rem;
 }
 .grid--2-cols {
   grid-template-columns: repeat(2, 1fr);
@@ -114,7 +136,10 @@ body {
   grid-template-columns: repeat(3, 1fr);
 }
 .grid--4-cols {
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
+}
+.grid--5-cols {
+  grid-template-columns: repeat(5, 1fr);
 }
 .grid--center-v {
   align-items: center;
