@@ -33,6 +33,10 @@
 .icon-mobile-nav[name="close-outline"] {
   display: none;
 }
+/* Sticky */
+.sticky {
+  position: fixed;
+}
 
 /* Desktop */
 .main-nav-link {
